@@ -1,0 +1,6 @@
+[submodule "thrones_db_spring"]
+	path = thrones_db_spring
+	url = https://github.com/QuiteStochastic/thrones_db_spring.git
+[submodule "thrones_scan_to_s3"]
+	path = thrones_scan_to_s3
+	url = https://github.com/QuiteStochastic/thrones_scan_to_s3.git
