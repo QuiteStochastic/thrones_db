@@ -1,2 +1,11 @@
 #docker compose placeholder
 
+version: '2'
+
+services:
+  spring:
+    container_name: spring_container
+    build: ./thrones_db_spring
+    image: thrones_db_spring
+    ports:
+      - "8080:8080"
