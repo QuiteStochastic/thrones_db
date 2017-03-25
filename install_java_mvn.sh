@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-
-
-
 ##java
 sudo yum install java-1.8.0-openjdk-devel -y
 
@@ -15,10 +12,9 @@ sudo yum install java-1.8.0-openjdk-devel -y
 echo "export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.29.amzn1.x86_64" | sudo tee --append /etc/profile
 echo "export PATH=\$JAVA_HOME/bin:\$PATH" | sudo tee --append /etc/profile
 
-
+##run these lines outside the script, or run "source <this script>"
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.29.amzn1.x86_64
 export PATH=$JAVA_HOME/bin:$PATH
-
 
 
 
