@@ -4,7 +4,7 @@
 
 
 ##java
-sudo yum install java-1.8.0-openjdk-devel
+sudo yum install java-1.8.0-openjdk-devel -y
 
 
 #echo "export JAVA_HOME=\$(dirname \$(dirname \$(readlink -f \$(which java))))" | sudo tee --append /etc/profile

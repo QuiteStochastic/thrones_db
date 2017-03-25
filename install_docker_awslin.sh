@@ -1,13 +1,13 @@
 #!/usr/bin/env sh
+##run this file as root
 
-sudo curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-17.03.0-ce.tgz && tar --strip-components=1 -xvzf docker-17.03.0-ce.tgz -C /usr/local/bin
+curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-17.03.0-ce.tgz && tar --strip-components=1 -xvzf docker-17.03.0-ce.tgz -C /usr/local/bin
 git clone https://github.com/tianon/cgroupfs-mount
-sudo mv cgroupfs-mount/cgroupfs-mount /usr/local/bin/
-sudo groupadd docker
-sudo usermod -aG docker ec2-user
+mv cgroupfs-mount/cgroupfs-mount /usr/local/bin/
+groupadd docker
+usermod -aG docker ec2-user
 
 ##do the below block every time the box restarts
-sudo su
 export PATH=/usr/local/bin:$PATH
 cgroupfs-mount
 ##turn on experimental mode
