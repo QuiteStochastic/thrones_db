@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
-curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-17.03.0-ce.tgz && tar --strip-components=1 -xvzf docker-17.03.0-ce.tgz -C /usr/local/bin
+sudo curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-17.03.0-ce.tgz && tar --strip-components=1 -xvzf docker-17.03.0-ce.tgz -C /usr/local/bin
 git clone https://github.com/tianon/cgroupfs-mount
-mv cgroupfs-mount/cgroupfs-mount /usr/local/bin/
-groupadd docker
-usermod -aG docker $USER
+sudo mv cgroupfs-mount/cgroupfs-mount /usr/local/bin/
+sudo groupadd docker
+sudo usermod -aG docker ec2-user
 
 ##do the below block every time the box restarts
 sudo su
