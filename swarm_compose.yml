@@ -6,4 +6,4 @@ services:
     #build: ./thrones_db_spring
     image: thrones_db_spring
     ports:
-      - "8080:8080"
+      - "80:80"
