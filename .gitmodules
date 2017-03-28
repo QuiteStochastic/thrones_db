@@ -4,3 +4,6 @@
 [submodule "thrones_scan_to_s3"]
 	path = thrones_scan_to_s3
 	url = https://github.com/QuiteStochastic/thrones_scan_to_s3.git
+[submodule "thrones_db_psql"]
+	path = thrones_db_psql
+	url = https://github.com/QuiteStochastic/thrones_db_psql.git

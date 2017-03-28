@@ -2,8 +2,15 @@ version: '3'
 
 services:
   spring:
-    #container_name: spring_container
-    #build: ./thrones_db_spring
-    image: thrones_db_spring
+    image: thrones_db_spring_image
     ports:
       - "80:80"
+    networks:
+      - thrones_net
+  psql:
+    image: thrones_db_psql_image
+    networks:
+      - thrones_net
+
+networks:
+    thrones_net:

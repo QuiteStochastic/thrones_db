@@ -1,19 +1,29 @@
 #!/usr/bin/env bash
 
+function returnIfFail()
+{
+	if [[ $1 != 0 ]]
+	then
+        	return
+	fi
+}
+
+
+
 cd thrones_db_spring
-mvn clean package
-if [[ $? != 0 ]]
-then
-	cd ..
-	return
-fi
-docker build -t thrones_db_spring .
+mvn clean package; returnIfFail $?
+
+docker build -t thrones_db_spring_image .
+returnIfFail $?
 cd ..
 
-if [[ $? != 0 ]]
-then
-        return
-fi
+
+cd thrones_db_psql
+docker build -t thrones_db_psql_image .
+returnIfFail $?
+cd ..
+
+
 
 
 docker swarm init
