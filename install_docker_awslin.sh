@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 ##run this file as root
 
-curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-1.13.1.tgz && tar --strip-components=1 -xvzf docker-17.03.0-ce.tgz -C /usr/local/bin
+curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-17.03.0-ce.tgz && tar --strip-components=1 -xvzf docker-17.03.0-ce.tgz -C /usr/local/bin
 git clone https://github.com/tianon/cgroupfs-mount
 mv cgroupfs-mount/cgroupfs-mount /usr/local/bin/
 groupadd docker
